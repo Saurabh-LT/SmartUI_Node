@@ -32,7 +32,6 @@ let capabilities = {
     // Setup Input capabilities
     var gridUrl = "https://" + USERNAME + ":" + KEY + "@hub.lambdatest.com/wd/hub";
     let driver = await new Builder().usingServer(gridUrl).withCapabilities(capabilities).build();
-    driver.manage().window().fullscreen();
     try {
         console.log('Driver started');
         await driver.get("https://www.lambdatest.com/");
