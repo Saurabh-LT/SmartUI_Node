@@ -1,9 +1,13 @@
 const { Builder, By, Key, until, Proxy } = require('selenium-webdriver');
 const proxy = require('selenium-webdriver/proxy');
 const {smartuiSnapshot} = require('@lambdatest/selenium-driver');
-// const firefox = require('selenium-webdriver/firefox');
-// const chrome = require('selenium-webdriver/chrome');
-// const fs = require('fs');
+
+
+// username: Username can be found at automation dashboard
+const USERNAME = process.env.LT_USERNAME || "<USERNAME>";
+
+// AccessKey:  AccessKey can be generated from automation dashboard or profile section
+const KEY = process.env.LT_ACCESS_KEY || "<ACCESS_KEY>";
 
 
 
@@ -12,8 +16,8 @@ let capabilities = {
     browserName: "chrome",
     version: "latest",
     "LT:Options": {
-		"username": "userName",
-		"accessKey": "accessKey",
+		"username": USERNAME,
+		"accessKey": KEY,
 		"platformName": "macOS Catalina",
 		"project": "Untitled",
 		"w3c": true,
@@ -26,7 +30,7 @@ let capabilities = {
 
 (async function example() {
     // Setup Input capabilities
-    var gridUrl = "https://" + "saurabhlambdatest" + ":" + "3ITNMLNecjF951i6EPBqY6JLEPBfSAQWrbiMRWAXbgaUogvgcK" + "@hub.lambdatest.com/wd/hub";
+    var gridUrl = "https://" + USERNAME + ":" + KEY + "@hub.lambdatest.com/wd/hub";
     let driver = await new Builder().usingServer(gridUrl).withCapabilities(capabilities).build();
     driver.manage().window().fullscreen();
     try {
