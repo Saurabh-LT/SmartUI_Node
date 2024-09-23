@@ -1,0 +1,16 @@
+{
+  "name": "smartui_node",
+  "version": "1.0.0",
+  "description": "This repo will be used to cover CLI Exec and Capture Automations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saurabh",
+  "license": "ISC",
+  "dependencies": {
+    "@lambdatest/selenium-driver": "^1.0.6",
+    "@lambdatest/smartui-cli": "^4.0.4",
+    "selenium-webdriver": "^4.25.0"
+  }
+}
