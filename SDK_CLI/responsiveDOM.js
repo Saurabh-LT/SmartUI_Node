@@ -62,7 +62,7 @@ function scrollToBottom({
     var gridUrl = "https://" + USERNAME + ":" + KEY + "@hub.lambdatest.com/wd/hub";
     let driver = await new Builder().usingServer(gridUrl).withCapabilities(capabilities).build();
     try {
-        let options0 =
+        let mobile_dom_options =
         {
             "mobile": {
                 "devices": [
@@ -77,7 +77,7 @@ function scrollToBottom({
               }
         };
 
-        let options1 =
+        let web_dom_options =
         {
             "web": {
                 "browsers": [
@@ -102,23 +102,23 @@ function scrollToBottom({
         await driver.get("https://www.3rdcoastsightcast.com/texas-fishing-charter-rates");
         await driver.navigate().refresh();
         await driver.executeScript(scrollToBottom);
-        await smartuiSnapshot(driver, "3rdcoastsightcast", options1);
+        await smartuiSnapshot(driver, "3rdcoastsightcast", web_dom_options);
 
         await driver.get("https://bento.monexinsight-dev.net/");
         await driver.navigate().refresh();
         await driver.executeScript(scrollToBottom);
-        await smartuiSnapshot(driver, "monexinsight", options1);
+        await smartuiSnapshot(driver, "monexinsight", web_dom_options);
 
         
         await driver.manage().window().setSize(380, 3080);
         await driver.navigate().refresh();
         await driver.get("https://www.3rdcoastsightcast.com/texas-fishing-charter-rates");
         await driver.executeScript(scrollToBottom);
-        await smartuiSnapshot(driver, "3rdcoastsightcast", options0);
+        await smartuiSnapshot(driver, "3rdcoastsightcast", mobile_dom_options);
 
         await driver.get("https://bento.monexinsight-dev.net/");
         await driver.executeScript(scrollToBottom);
-        await smartuiSnapshot(driver, "monexinsight", options0);
+        await smartuiSnapshot(driver, "monexinsight", mobile_dom_options);
 
 
         
