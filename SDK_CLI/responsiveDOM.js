@@ -110,18 +110,6 @@ function scrollToBottom({
         await driver.get("https://bento.monexinsight-dev.net/");
         await driver.executeScript(scrollToBottom);
         await smartuiSnapshot(driver, "monexinsight", options0);
-
-
-        
-        driver.manage().window().maximize();
-        await driver.navigate().refresh();
-        await driver.get("https://www.3rdcoastsightcast.com/texas-fishing-charter-rates");
-        await driver.executeScript(scrollToBottom);
-        await smartuiSnapshot(driver, "3rdcoastsightcast");
-
-        await driver.get("https://bento.monexinsight-dev.net/");
-        await driver.executeScript(scrollToBottom);
-        await smartuiSnapshot(driver, "monexinsight");
         
     } catch (error) {
         console.error(error);
