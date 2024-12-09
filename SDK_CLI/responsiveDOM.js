@@ -67,7 +67,7 @@ function scrollToBottom({
             "mobile": {
                 "devices": [
                     "iPhone 14",
-                    "Galaxy S23"
+                    "Galaxy S24"
                 ],
                 "fullPage": true,
                 "orientation": "portrait"
@@ -93,34 +93,18 @@ function scrollToBottom({
         await driver.executeScript(scrollToBottom);
         await smartuiSnapshot(driver, "3rdcoastsightcast");
 
-        await driver.get("https://bento.monexinsight-dev.net/");
-        await driver.executeScript(scrollToBottom);
-        await smartuiSnapshot(driver, "monexinsight");
-
-
         driver.manage().window().maximize();
         await driver.get("https://www.3rdcoastsightcast.com/texas-fishing-charter-rates");
         await driver.navigate().refresh();
         await driver.executeScript(scrollToBottom);
         await smartuiSnapshot(driver, "3rdcoastsightcast", web_dom_options);
-
-        await driver.get("https://bento.monexinsight-dev.net/");
-        await driver.navigate().refresh();
-        await driver.executeScript(scrollToBottom);
-        await smartuiSnapshot(driver, "monexinsight", web_dom_options);
-
+        
         
         await driver.manage().window().setSize(380, 3080);
         await driver.navigate().refresh();
         await driver.get("https://www.3rdcoastsightcast.com/texas-fishing-charter-rates");
         await driver.executeScript(scrollToBottom);
         await smartuiSnapshot(driver, "3rdcoastsightcast", mobile_dom_options);
-
-        await driver.get("https://bento.monexinsight-dev.net/");
-        await driver.executeScript(scrollToBottom);
-        await smartuiSnapshot(driver, "monexinsight", mobile_dom_options);
-
-
         
     } catch (error) {
         console.error(error);
