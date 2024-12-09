@@ -67,7 +67,7 @@ function scrollToBottom({
             "mobile": {
                 "devices": [
                     "iPhone 14",
-                    "Galaxy S23"
+                    "Galaxy S24"
                 ],
                 "fullPage": true,
                 "orientation": "portrait"
