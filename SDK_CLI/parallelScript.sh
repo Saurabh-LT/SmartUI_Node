@@ -5,6 +5,6 @@ for i in $(seq 1 $COUNT); do
     FIRST_DIGIT=$((3 + i))
     PORT="${FIRST_DIGIT}000"
     echo $PORT
-    INSTANCE_ID=$i npx smartui exec node SeleniumTest.js --config smartui-web.json --port $PORT & 
+    INSTANCE_ID=$i npx smartui exec node SeleniumTest.js --port $PORT & 
 done
 wait
