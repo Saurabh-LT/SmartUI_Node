@@ -30,7 +30,6 @@
     "enableJavaScript": false,
     "allowedHostnames": [],
     "smartIgnore": false,
-    "useGlobalCache": true,
     "waitForDiscovery": 100000
   }
   
