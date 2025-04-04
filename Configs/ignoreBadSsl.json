@@ -1,0 +1,28 @@
+{
+    "web": {
+      "browsers": [
+        "chrome",
+        "safari"
+      ],
+      "viewports": [
+        [
+          1920
+        ]
+      ]
+    },
+    "mobile": {
+      "devices": [
+        "iPhone 14",
+        "Galaxy S24"
+      ],
+      "fullPage": true,
+      "orientation": "portrait"
+    },
+    "waitForTimeout": 1000,
+    "enableJavaScript": false,
+    "allowedHostnames": [],
+    "smartIgnore": false,
+    "waitForDiscovery": 100000,
+    "ignoreHTTPSErrors": true
+  }
+  
