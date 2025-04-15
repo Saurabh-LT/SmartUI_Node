@@ -36,7 +36,7 @@ let capabilities = {
     let driver = await new Builder().usingServer(gridUrl).withCapabilities(capabilities).build();
     try {
         console.log('Driver started');
-        await driver.get("https://www.lambdatest.com/");
+        await driver.get("https://ipinfo.io/");
         await new Promise(r => setTimeout(r, 2000));
         await smartuiSnapshot(driver, 'lambdatestHomePage');
     } catch (error) {
