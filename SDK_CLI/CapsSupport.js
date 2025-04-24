@@ -10,6 +10,9 @@ const USERNAME = process.env.LT_USERNAME || "<USERNAME>";
 const KEY = process.env.LT_ACCESS_KEY || "<ACCESS_KEY>";
 
 
+const HUB_URL = process.env.HUB_URL || "@hub.lambdatest.com/wd/hub";
+
+
 
 let capabilities = {
     platform: "",
@@ -32,7 +35,7 @@ let capabilities = {
 
 (async function example() {
     // Setup Input capabilities
-    var gridUrl = "https://" + USERNAME + ":" + KEY + "@hub.lambdatest.com/wd/hub";
+    var gridUrl = "https://" + USERNAME + ":" + KEY + HUB_URL;
     let driver = await new Builder().usingServer(gridUrl).withCapabilities(capabilities).build();
     try {
         console.log('Driver started');
