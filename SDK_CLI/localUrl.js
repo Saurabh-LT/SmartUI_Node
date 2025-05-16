@@ -21,6 +21,7 @@ let capabilities = {
 		"project": "Untitled",
 		"w3c": true,
         "tunnel":true,
+        "tunnelName":process.env.TUNNEL_NAME,
         name: "SmartUI Node Test", // name of the test
         build: "SmartUI Node", // name of the build
         visual: true,
