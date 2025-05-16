@@ -26,7 +26,8 @@
     "smartIgnore": false,
     "waitForDiscovery": 100000,
     "tunnel": {
-        "type": "auto"
+        "type": "auto",
+        "tunnelName": "nodeTunnel"
     }
   }
   
