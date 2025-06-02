@@ -1,0 +1,13 @@
+{
+    "mobile": {
+      "devices": [
+        "Galaxy S24"
+      ],
+      "fullPage": true,
+      "orientation": "portrait"
+    },
+    "waitForTimeout": 1000,
+    "enableJavaScript": false,
+    "allowedHostnames": []
+  }
+  
