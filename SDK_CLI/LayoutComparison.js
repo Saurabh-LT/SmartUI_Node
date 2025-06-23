@@ -18,11 +18,11 @@ let capabilities = {
     "LT:Options": {
 		"username": USERNAME,
 		"accessKey": KEY,
-		"platformName": "macOS Catalina",
+		"platformName": "Windows 10",
 		"project": "Layout-SmartUI",
 		"w3c": true,
         name: "SmartUI Node Layout Test", // name of the test
-        build: "SmartUI Node Layout", // name of the build
+        build: "SmartUI Exec Node Layout", // name of the build
         visual: true,
 	},    
   };

@@ -18,11 +18,11 @@ let capabilities = {
     "LT:Options": {
         "username": USERNAME,
         "accessKey": KEY,
-        "platformName": "macOS Catalina",
+        "platformName": "Windows 10",
         "project": "Untitled",
         "w3c": true,
         name: "SmartUI Bad SSL test", // name of the test
-        build: "BadSsl_01", // name of the build
+        build: "SmartUI Exec Node Bad SSL", // name of the build
         visual: true,
     },    
   };
