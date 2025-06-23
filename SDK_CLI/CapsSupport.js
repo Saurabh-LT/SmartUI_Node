@@ -25,7 +25,7 @@ let capabilities = {
 		"project": "Untitled",
 		"w3c": true,
         name: "SmartUI Exec caps Test", // name of the test
-        build: "SmartUI Exec Caps", // name of the build
+        build: "SmartUI Exec Node caps", // name of the build
         visual: true,
         "smartUI.project": process.env.SMARTUI_PROJECT_NAME,
         "smartUI.build" : process.env.SMART_UI_BUILD_NAME
