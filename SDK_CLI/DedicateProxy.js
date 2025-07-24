@@ -41,8 +41,8 @@ let capabilities = {
     try {
         console.log('Driver started');
         await driver.get("https://qa.goldman.com/");
-        await driver.findElement(By.xpath("//input[@data-target='user-id']")).sendKeys(process.env.DP_USER_ID);
-        await driver.findElement(By.xpath("//input[@class='form-control form-control-right-icon']")).sendKeys(process.env.DP_PASSWORD);
+        await driver.findElement(By.xpath("//input[@data-target='user-id']")).sendKeys(process.env.GS_USER_ID);
+        await driver.findElement(By.xpath("//input[@class='form-control form-control-right-icon']")).sendKeys(process.env.GS_PASSWORD);
         await driver.findElement(By.xpath("//button[@type='submit']")).click();
         await new Promise(r => setTimeout(r, 20000));
         var ignoreDOMs = {
