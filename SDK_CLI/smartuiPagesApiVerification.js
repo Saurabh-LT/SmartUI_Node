@@ -34,5 +34,5 @@ async function getBuildStatus() {
 
 (async function example() {
     const build_status= await getBuildStatus();
-    assert.equal(build_status,"Approved",'Build is not approved, Build Status : '+build_status);
+    assert.equal(build_status,"approved",'Build is not approved, Build Status : '+build_status);
 })();
