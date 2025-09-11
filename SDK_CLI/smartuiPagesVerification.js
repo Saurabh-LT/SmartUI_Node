@@ -32,7 +32,8 @@ let smartuiProjectsCount= "//h2[@id='totalProjectsTitle']";
 let smartuiNonBaselineBuildsList= "//ul[@aria-label='non baseline build list']";
 let smartuiSettingsToken= "//div[@id='ProjectToken_clipboard_wrapper']";
 let smartuiMismatchPercentage= "//div[@id='mismatchInfoContainer-webView']";
-let smartuiPlanContainer= "//div[@id='Plans_Container']";
+let commonHeaderTopBar= "//div[@class='Top_Nav']";
+let commonHeaderSideBar= "//div[@id='left_sidebar_header-items']";
 
 
 let capabilities = {
@@ -78,7 +79,7 @@ let capabilities = {
         await driver.wait(until.elementIsVisible(element),10000);
         let options = {
             ignoreDOM: {
-                xpath: [smartuiProjectsList,smartuiPlanContainer],
+                xpath: [smartuiProjectsList,commonHeaderTopBar,commonHeaderSideBar],
             },
             element: {
                 id: 'root',
@@ -88,7 +89,7 @@ let capabilities = {
 
         options = {
             ignoreDOM: {
-                xpath: [smartuiPlanContainer],
+                xpath: [commonHeaderTopBar,commonHeaderSideBar],
             },
             element: {
                 id: 'root',
