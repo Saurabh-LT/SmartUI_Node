@@ -1,0 +1,22 @@
+{
+    "web": {
+      "browsers": [
+        "chrome",
+        "safari",
+        "firefox",
+        "edge"
+      ],
+      "viewports": [
+        [
+          1920
+        ],
+        [
+          1080
+        ]
+      ]
+    },
+    "waitForTimeout": 1000,
+    "enableJavaScript": false,
+    "allowedHostnames": []
+  }
+  

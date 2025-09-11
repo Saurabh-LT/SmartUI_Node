@@ -78,7 +78,10 @@ let capabilities = {
         await driver.wait(until.elementIsVisible(element),10000);
         let options = {
             ignoreDOM: {
-                xpath: [smartuiProjectsList],
+                xpath: [smartuiProjectsList,smartuiPlanContainer],
+            },
+            element: {
+                id: 'root',
             }
         }
         await smartuiSnapshot(driver, 'SmartUI-Dashboard',options);
@@ -86,6 +89,9 @@ let capabilities = {
         options = {
             ignoreDOM: {
                 xpath: [smartuiPlanContainer],
+            },
+            element: {
+                id: 'root',
             }
         }
 
