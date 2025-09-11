@@ -33,7 +33,8 @@ let smartuiNonBaselineBuildsList= "//ul[@aria-label='non baseline build list']";
 let smartuiSettingsToken= "//div[@id='ProjectToken_clipboard_wrapper']";
 let smartuiMismatchPercentage= "//div[@id='mismatchInfoContainer-webView']";
 let commonHeaderTopBar= "//div[@class='Top_Nav']";
-let commonHeaderSideBar= "//div[@id='left_sidebar_header-items']";
+let commonHeaderSideBar= "//div[@role='navigation']";
+let smartuiBuildUpdateTime= "//div[contains(text(),'Updated')]/..";
 
 
 let capabilities = {
@@ -123,6 +124,15 @@ let capabilities = {
 
         //SmartUI Builds Page
 
+        options = {
+            ignoreDOM: {
+                xpath: [commonHeaderTopBar,commonHeaderSideBar,smartuiBuildUpdateTime],
+            },
+            element: {
+                id: 'root',
+            }
+        }
+
         await driver.get(BASE_URL+"/builds/"+PROJECT_ID);
         element= await driver.wait(until.elementLocated(By.xpath(smartuiNonBaselineBuildsList)),30000);
         await driver.wait(until.elementIsVisible(element),10000);
@@ -130,6 +140,15 @@ let capabilities = {
         await smartuiSnapshot(driver, "SamrtUI-Build-Page",options);
 
         //SmartUI Screenshot Page
+
+        options = {
+            ignoreDOM: {
+                xpath: [commonHeaderTopBar,commonHeaderSideBar,smartuiBuildUpdateTime,"(//div[@id='TestTopBar']//span)[1]","//span[contains(text(),'Updated')]/.."],
+            },
+            element: {
+                id: 'root',
+            }
+        }
 
         await driver.get(BASE_URL+"/test/web/"+PROJECT_ID+"/"+BUILD_ID+"/TestIm?pageNo=1&index=2&baseline=false");
         await driver.wait(until.elementLocated(By.xpath(smartuiMismatchPercentage)),30000);
