@@ -33,7 +33,7 @@ let smartuiNonBaselineBuildsList= "//ul[@aria-label='non baseline build list']";
 let smartuiSettingsToken= "//div[@id='ProjectToken_clipboard_wrapper']";
 let smartuiMismatchPercentage= "//div[@id='mismatchInfoContainer-webView']";
 let commonHeaderTopBar= "//div[@class='Top_Nav']";
-let commonHeaderSideBar= "//div[@id='left_sidebar_header-items']";
+let commonHeaderSideBar= "//div[@role='navigation']";
 
 
 let capabilities = {
