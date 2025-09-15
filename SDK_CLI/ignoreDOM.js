@@ -34,15 +34,13 @@ let capabilities = {
     let driver = await new Builder().usingServer(gridUrl).withCapabilities(capabilities).build();
     let options = {
         ignoreDOM: {
-          id: ["header, footer"],
-          class: ["wrapper"],
-          cssSelector: ["#__next > section"]
+          id: ["root"]
         }
     }
 
     try {
         console.log('Driver started');
-        await driver.get("https://www.lambdatest.com/visual-regression-testing");
+        await driver.get("https://ltqa-frontend.lambdatestinternal.com/dynamic-data-testing");
         await new Promise(r => setTimeout(r, 2000));
         await smartuiSnapshot(driver, 'lambdatestHomePage', options);
     } catch (error) {
