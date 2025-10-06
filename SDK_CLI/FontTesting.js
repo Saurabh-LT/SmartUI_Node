@@ -36,11 +36,11 @@ let capabilities = {
         console.log('Driver started');
         await driver.get("https://ltqa-frontend.lambdatestinternal.com/font-testing");
         await new Promise(r => setTimeout(r, 2000));
-        await smartuiSnapshot(driver, 'font-testing');
+        await smartuiSnapshot(driver, 'Font-testing');
 
         await driver.get("https://ltqa-frontend.lambdatestinternal.com/all-languages");
         await new Promise(r => setTimeout(r, 2000));
-        await smartuiSnapshot(driver, 'all-languages');
+        await smartuiSnapshot(driver, 'All-languages');
     } catch (error) {
         console.error(error);
     } finally {
