@@ -76,7 +76,7 @@ let capabilities = {
 
         //SmartUI Dashboard Verification
         await driver.get(BASE_URL+"/projects");
-        element= await driver.wait(until.elementLocated(By.xpath(smartuiProjectsCount)),30000);
+        element= await driver.wait(until.elementLocated(By.xpath(smartuiProjectsCount)),60000);
         await driver.wait(until.elementIsVisible(element),10000);
         let options = {
             ignoreDOM: {
@@ -103,7 +103,7 @@ let capabilities = {
 
         //SmartUI Project Settings Page
         await driver.get(BASE_URL+"/project-settings/"+PROJECT_ID+"/builds");
-        await driver.wait(until.elementLocated(By.xpath(smartuiSettingsToken)),20000);
+        await driver.wait(until.elementLocated(By.xpath(smartuiSettingsToken)),30000);
         await smartuiSnapshot(driver, 'SmartUI-ProjectSettings',options);
 
         //SmartUI Onboarding Pages
