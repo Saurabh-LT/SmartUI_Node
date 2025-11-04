@@ -21,6 +21,8 @@ const PROJECT_ID = process.env.PROJECT_ID || "";
 
 const BUILD_ID = process.env.BUILD_ID || "";
 
+const elementTimeOut= 60000;
+
 
 //Selectors
 let emailInputSelector= "//input[@name='email']";
@@ -65,19 +67,19 @@ let capabilities = {
         //Login with Lambdatest account
         await driver.get(BASE_URL);
 
-        let element= await driver.wait(until.elementLocated(By.xpath(emailInputSelector)),10000);
+        let element= await driver.wait(until.elementLocated(By.xpath(emailInputSelector)),elementTimeOut);
         await element.sendKeys(EMAIL);
-        element= await driver.wait(until.elementLocated(By.xpath(passwordInputSelector)),10000);
+        element= await driver.wait(until.elementLocated(By.xpath(passwordInputSelector)),elementTimeOut);
         await element.sendKeys(PASSWORD);
-        element= await driver.wait(until.elementLocated(By.xpath(loginButtonSelector)),10000);
+        element= await driver.wait(until.elementLocated(By.xpath(loginButtonSelector)),elementTimeOut);
         await element.click();
-        await driver.wait(until.elementLocated(By.xpath(homeDashboardTitle)),20000);
+        await driver.wait(until.elementLocated(By.xpath(homeDashboardTitle)),elementTimeOut);
 
 
         //SmartUI Dashboard Verification
         await driver.get(BASE_URL+"/projects");
-        element= await driver.wait(until.elementLocated(By.xpath(smartuiProjectsCount)),30000);
-        await driver.wait(until.elementIsVisible(element),10000);
+        element= await driver.wait(until.elementLocated(By.xpath(smartuiProjectsCount)),elementTimeOut);
+        await driver.wait(until.elementIsVisible(element),elementTimeOut);
         let options = {
             ignoreDOM: {
                 xpath: [smartuiProjectsList,commonHeaderTopBar,commonHeaderSideBar],
@@ -103,7 +105,7 @@ let capabilities = {
 
         //SmartUI Project Settings Page
         await driver.get(BASE_URL+"/project-settings/"+PROJECT_ID+"/builds");
-        await driver.wait(until.elementLocated(By.xpath(smartuiSettingsToken)),20000);
+        await driver.wait(until.elementLocated(By.xpath(smartuiSettingsToken)),elementTimeOut);
         await smartuiSnapshot(driver, 'SmartUI-ProjectSettings',options);
 
         //SmartUI Onboarding Pages
@@ -134,8 +136,8 @@ let capabilities = {
         }
 
         await driver.get(BASE_URL+"/builds/"+PROJECT_ID);
-        element= await driver.wait(until.elementLocated(By.xpath(smartuiNonBaselineBuildsList)),30000);
-        await driver.wait(until.elementIsVisible(element),10000);
+        element= await driver.wait(until.elementLocated(By.xpath(smartuiNonBaselineBuildsList)),elementTimeOut);
+        await driver.wait(until.elementIsVisible(element),elementTimeOut);
         await new Promise(r => setTimeout(r, 3000));
         await smartuiSnapshot(driver, "SamrtUI-Build-Page",options);
 
@@ -151,7 +153,7 @@ let capabilities = {
         }
 
         await driver.get(BASE_URL+"/test/web/"+PROJECT_ID+"/"+BUILD_ID+"/TestIm?pageNo=1&index=2&baseline=false");
-        await driver.wait(until.elementLocated(By.xpath(smartuiMismatchPercentage)),30000);
+        await driver.wait(until.elementLocated(By.xpath(smartuiMismatchPercentage)),elementTimeOut);
         await smartuiSnapshot(driver, "SmartUI-Screenshot-Page",options);
 
 
