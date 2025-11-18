@@ -18,6 +18,7 @@ let capabilities = {
   "project": "Untitled",
   "region": "us",
   "w3c": true,
+  "idleTimeout": 900,
   name: "test session", // name of the test
   build: "platform + browserName + version", // name of the build
 },    
