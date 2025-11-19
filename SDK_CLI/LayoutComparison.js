@@ -4,10 +4,10 @@ const {smartuiSnapshot} = require('@lambdatest/selenium-driver');
 
 
 // username: Username can be found at automation dashboard
-const USERNAME = process.env.LT_USERNAME || "saurabhlambdatest";
+const USERNAME = process.env.LT_USERNAME || "<USERNAME>";
 
 // AccessKey:  AccessKey can be generated from automation dashboard or profile section
-const KEY = process.env.LT_ACCESS_KEY || "LT_DH7GiWsCwSpBLO6Z3ROJVRdL5PMZ3jhWvtDToKApcvbDPes";
+const KEY = process.env.LT_ACCESS_KEY || "<ACCESS_KEY>";
 
 
 
