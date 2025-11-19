@@ -38,25 +38,40 @@ let capabilities = {
     try {
         console.log('Driver started');
 
-        // await driver.get("https://www.whatsapp.com/?lang=hi"); // Baseline
-        await driver.get("https://www.whatsapp.com/?lang=en"); // Non-Baseline
+        // await driver.get("https://ltqa-frontend.lambdatestinternal.com/layout1"); // Baseline
+        await driver.get("https://ltqa-frontend.lambdatestinternal.com/layout3"); // Non-Baseline
         await new Promise(r => setTimeout(r, 2000));
-        await smartuiSnapshot(driver, 'whatsapp', comparisonType);
+        await smartuiSnapshot(driver, 'layout1', comparisonType);
+
+        // await driver.get("https://ltqa-frontend.lambdatestinternal.com/smartrca1"); // Baseline
+        await driver.get("https://ltqa-frontend.lambdatestinternal.com/smartrca2"); // Non-Baseline
+        await new Promise(r => setTimeout(r, 2000));
+        await smartuiSnapshot(driver, 'netflix', comparisonType);
+
+        // await driver.get("https://ltqa-frontend.lambdatestinternal.com/layout2"); // Baseline
+        await driver.get("https://ltqa-frontend.lambdatestinternal.com/smartrca3"); // Non-Baseline
+        await new Promise(r => setTimeout(r, 2000));
+        await smartuiSnapshot(driver, 'layout2', comparisonType);
+
+        // await driver.get("https://ltqa-frontend.lambdatestinternal.com/dynamic-data-testing"); // Baseline
+        await driver.get("https://ltqa-frontend.lambdatestinternal.com/dynamic-data-testing"); // Non-Baseline
+        await new Promise(r => setTimeout(r, 2000));
+        await smartuiSnapshot(driver, 'layout3', comparisonType);
+
+        // await driver.get("https://ltqa-frontend.lambdatestinternal.com/real-device-cloud"); // Baseline
+        await driver.get("https://ltqa-frontend.lambdatestinternal.com/hyperexecute"); // Non-Baseline
+        await new Promise(r => setTimeout(r, 2000));
+        await smartuiSnapshot(driver, 'layout4', comparisonType);
 
         // await driver.get("https://www.netflix.com/in/"); // Baseline
         await driver.get("https://www.netflix.com/in-hi/"); // Non-Baseline
         await new Promise(r => setTimeout(r, 2000));
         await smartuiSnapshot(driver, 'netflix', comparisonType);
 
-        // await driver.get("https://www.atlassian.com/ko"); // Baseline
-        await driver.get("https://www.atlassian.com/"); // Non-Baseline
+        // await driver.get("https://www.atlassian.com/de"); // Baseline
+        await driver.get("https://www.atlassian.com/en"); // Non-Baseline
         await new Promise(r => setTimeout(r, 2000));
         await smartuiSnapshot(driver, 'atlassian', comparisonType);
-
-        // await driver.get("https://www.autodesk.com/asean"); // Baseline
-        await driver.get("https://www.autodesk.com/de"); // Non-Baseline
-        await new Promise(r => setTimeout(r, 2000));
-        await smartuiSnapshot(driver, 'autodesk', comparisonType);
 
     } catch (error) {
         console.error(error);
