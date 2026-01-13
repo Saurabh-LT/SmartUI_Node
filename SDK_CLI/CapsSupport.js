@@ -9,6 +9,7 @@ const USERNAME = process.env.LT_USERNAME || "<USERNAME>";
 // AccessKey:  AccessKey can be generated from automation dashboard or profile section
 const KEY = process.env.LT_ACCESS_KEY || "<ACCESS_KEY>";
 
+const buildName = process.env.AUTOMATION_BUILD_NAME || "SmartUI Exec Node caps";
 
 const HUB_URL = process.env.HUB_URL || "@hub.lambdatest.com/wd/hub";
 
@@ -25,7 +26,7 @@ let capabilities = {
 		"project": "Untitled",
 		"w3c": true,
         name: "SmartUI Exec caps Test", // name of the test
-        build: "SmartUI Exec Node caps", // name of the build
+        build: buildName, // name of the build
         visual: true,
         "smartUI.project": process.env.SMARTUI_PROJECT_NAME,
         "smartUI.build" : process.env.SMART_UI_BUILD_NAME

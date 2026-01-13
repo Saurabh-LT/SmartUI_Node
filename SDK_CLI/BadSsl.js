@@ -9,6 +9,8 @@ const USERNAME = process.env.LT_USERNAME || "<USERNAME>";
 // AccessKey:  AccessKey can be generated from automation dashboard or profile section
 const KEY = process.env.LT_ACCESS_KEY || "<ACCESS_KEY>";
 
+const buildName = process.env.AUTOMATION_BUILD_NAME || "SmartUI Exec Node Bad SSL";
+
 
 
 let capabilities = {
@@ -22,7 +24,7 @@ let capabilities = {
         "project": "Untitled",
         "w3c": true,
         name: "SmartUI Bad SSL test", // name of the test
-        build: "SmartUI Exec Node Bad SSL", // name of the build
+        build: buildName, // name of the build
         visual: true,
     },    
   };
