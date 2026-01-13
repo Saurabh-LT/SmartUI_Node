@@ -8,7 +8,7 @@ const USERNAME = process.env.LT_USERNAME || "<USERNAME>";
 // AccessKey:  AccessKey can be generated from automation dashboard or profile section
 const KEY = process.env.LT_ACCESS_KEY || "<ACCESS_KEY>";
 
-
+const buildName = process.env.AUTOMATION_BUILD_NAME || "SmartUI Exec Node LocalURL";
 
 let capabilities = {
     platform: "",
@@ -23,7 +23,7 @@ let capabilities = {
         "tunnel":true,
         "tunnelName":process.env.TUNNEL_NAME,
         name: "SmartUI Node Test", // name of the test
-        build: "SmartUI Exec Node LocalURL", // name of the build
+        build: buildName, // name of the build
         visual: true,
 	},    
   };

@@ -12,7 +12,7 @@ const KEY_PROD = process.env.DP_PROD_LT_ACCESS_KEY || "<ACCESS_KEY>";
 const KEY_STAGE = process.env.DP_STAGE_LT_ACCESS_KEY || "<ACCESS_KEY>";
 const HUB_URL = process.env.HUB_URL || "@hub.lambdatest.com/wd/hub";
 
-
+const buildName = process.env.AUTOMATION_BUILD_NAME || "SmartUI Dedicated Proxy";
 
 let capabilities = {
     platform: "",
@@ -25,6 +25,7 @@ let capabilities = {
 		"project": "Untitled",
 		"w3c": true,
         name: "SmartUI Dedicated Proxy", // name of the test
+        build: buildName, // name of the build
         visual: true,
 	},    
   };

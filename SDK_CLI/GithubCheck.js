@@ -19,6 +19,8 @@ const commitUrl = process.env.COMMIT_URL || "<COMMIT_URL>";
 // Github PAT
 const githubPat = process.env.GITHUB_PAT || "<GITHUB_PAT>";
 
+const buildName = process.env.AUTOMATION_BUILD_NAME || "SmartUI-Github-check";
+
 let capabilities = {
     platform: "",
     browserName: "chrome",
@@ -30,7 +32,7 @@ let capabilities = {
         "project": "SmartUI-Github-check",
         "w3c": true,
         name: "SmartUI-Github-check", // name of the test
-        build: "SmartUI-Github-check", // name of the build
+        build: buildName, // name of the build
         visual: true,
     },
 };

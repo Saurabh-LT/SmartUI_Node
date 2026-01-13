@@ -38,6 +38,7 @@ let commonHeaderTopBar= "//div[@class='Top_Nav']";
 let commonHeaderSideBar= "//div[@role='navigation']";
 let smartuiBuildUpdateTime= "//div[contains(text(),'Updated')]/..";
 
+const buildName = process.env.AUTOMATION_BUILD_NAME || "SmartUI Pages Verification";
 
 let capabilities = {
     platform: "",
@@ -50,7 +51,7 @@ let capabilities = {
 		"project": "Untitled",
 		"w3c": true,
         name: "SmartUI Pages", // name of the test
-        build: "SmartUI Pages Verification", // name of the build
+        build: buildName, // name of the build
         visual: true,
 	},    
   };
