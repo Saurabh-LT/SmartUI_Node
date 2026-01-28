@@ -34,13 +34,13 @@ let capabilities = {
     let driver = await new Builder().usingServer(gridUrl).withCapabilities(capabilities).build();
     let elementOptions = {
         element: {
-          class: 'tools_logo',
+          id: 'dynamic-data-header',
         }
     };
 
     try {
         console.log('Driver started');
-        await driver.get("https://www.lambdatest.com/visual-regression-testing");
+        await driver.get("https://ltqa-frontend.lambdatestinternal.com/dynamic-data-testing");
         await new Promise(r => setTimeout(r, 2000));
         await smartuiSnapshot(driver, 'lambdatestHomePage', elementOptions);
     } catch (error) {
