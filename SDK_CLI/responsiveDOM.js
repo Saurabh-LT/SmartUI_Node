@@ -89,12 +89,12 @@ function scrollToBottom({
             },
         };
         console.log('Driver started');
-        await driver.get("https://www.3rdcoastsightcast.com/texas-fishing-charter-rates");
+        await driver.get("https://ltqa-frontend.lambdatestinternal.com/responsive-dom");
         await driver.executeScript(scrollToBottom);
         await smartuiSnapshot(driver, "3rdcoastsightcast");
 
         driver.manage().window().maximize();
-        await driver.get("https://www.3rdcoastsightcast.com/texas-fishing-charter-rates");
+        await driver.get("https://ltqa-frontend.lambdatestinternal.com/responsive-dom");
         await driver.navigate().refresh();
         await driver.executeScript(scrollToBottom);
         await smartuiSnapshot(driver, "3rdcoastsightcast", web_dom_options);
@@ -102,7 +102,7 @@ function scrollToBottom({
         
         await driver.manage().window().setSize(380, 3080);
         await driver.navigate().refresh();
-        await driver.get("https://www.3rdcoastsightcast.com/texas-fishing-charter-rates");
+        await driver.get("https://ltqa-frontend.lambdatestinternal.com/responsive-dom");
         await driver.executeScript(scrollToBottom);
         await smartuiSnapshot(driver, "3rdcoastsightcast", mobile_dom_options);
         
