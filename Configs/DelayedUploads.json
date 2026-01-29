@@ -29,6 +29,6 @@
     "waitForTimeout": 1000,
     "enableJavaScript": false,
     "allowedHostnames": [],
-    "delayedUpload": true
+    "allowDuplicateSnapshotNames": true
   }
   
