@@ -1,0 +1,22 @@
+{
+  "mobile": [
+    {
+      "name": "Pixel 8",
+      "platform": ["Android 14"],
+      "orientation": "portrait"
+    }
+  ],
+  "figma": {
+    "depth": 1,
+    "configs": [
+      {
+        "figma_file_token": "LgVx5Io5M0On0YYNBe41Yk",
+        "figma_ids": [
+          "8068-8373"
+        ],
+          "screenshot_names":["LayoutTesting"]
+    
+      }
+    ] 
+  }
+}

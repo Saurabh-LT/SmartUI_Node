@@ -11,6 +11,7 @@
   "dependencies": {
     "@lambdatest/selenium-driver": "^1.0.6",
     "@lambdatest/smartui-cli": "^4.0.4",
-    "selenium-webdriver": "^4.25.0"
+    "selenium-webdriver": "^4.25.0",
+    "wd": "^1.14.0"
   }
 }
