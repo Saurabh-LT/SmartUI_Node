@@ -71,10 +71,7 @@ function scrollToBottom({
                 ],
                 "fullPage": true,
                 "orientation": "portrait"
-            },
-            ignoreDOM: {
-                class: ["nextAvailDate"],
-              }
+            }
         };
 
         let web_dom_options =
@@ -93,14 +90,14 @@ function scrollToBottom({
         await driver.executeScript(scrollToBottom);
         await smartuiSnapshot(driver, "3rdcoastsightcast");
 
-        driver.manage().window().maximize();
+        await driver.manage().window().maximize();
         await driver.get("https://ltqa-frontend.lambdatestinternal.com/responsive-dom");
         await driver.navigate().refresh();
         await driver.executeScript(scrollToBottom);
         await smartuiSnapshot(driver, "3rdcoastsightcast", web_dom_options);
         
         
-        await driver.manage().window().setSize(380, 3080);
+        await driver.manage().window().setRect({ width: 380, height: 800 });
         await driver.navigate().refresh();
         await driver.get("https://ltqa-frontend.lambdatestinternal.com/responsive-dom");
         await driver.executeScript(scrollToBottom);
