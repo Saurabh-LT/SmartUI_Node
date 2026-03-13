@@ -1,0 +1,17 @@
+{
+  "web": {
+    "customViewports": [
+      { "browser": "chrome", "viewport": [1920] },
+      { "browser": "firefox", "viewport": [1280] },
+      { "browser": "safari", "viewport": [1024] },
+      { "browser": "edge", "viewport": [1200] }
+    ]
+  },
+  "mobile": {
+    "devices": [
+      "Galaxy S24","iPhone 14"
+    ],
+    "fullPage": true,
+    "orientation": "portrait"
+  }
+}
